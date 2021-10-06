@@ -36,7 +36,7 @@ public class UserDaoImpl {
         System.out.println("dao joinRow()");
         Connection conn = null;
         PreparedStatement pstmt = null;
-        String joinSQL = "insert into tbl_join values(?, ?, ?)";
+        String joinSQL = "insert into tbl_login values(?, ?, ?)";
         int flag = 0;
         conn = DriverManager.getConnection(url, dbUser, dbPwd);
         System.out.println("conn:" + conn);
