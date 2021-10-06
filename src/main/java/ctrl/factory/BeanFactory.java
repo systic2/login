@@ -1,7 +1,9 @@
 package ctrl.factory;
 
 import ctrl.action.Command;
+import ctrl.action.JoinAction;
 import ctrl.action.LoginAction;
+import ctrl.action.LogoutAction;
 
 import java.util.HashMap;
 
@@ -16,8 +18,8 @@ public class BeanFactory {
     private HashMap<String, Command> map = new HashMap<String, Command>();
     private BeanFactory() {
         map.put("/dgccei/login.kpc", new LoginAction());
-//        map.put("/dgccei/logout.kpc", new LogoutAction());
-//        map.put("/dgccei/join.kpc", new JoinAction());
+        map.put("/dgccei/logout.kpc", new LogoutAction());
+        map.put("/dgccei/join.kpc", new JoinAction());
     }
     public static BeanFactory getInstance(){
         if(instance == null) {
