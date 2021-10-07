@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.vo.UserVO;
 import service.UserServiceImpl;
 
-@WebServlet("/join.dgccei")
+@WebServlet("/join.kpc")
 public class JoinServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
@@ -31,9 +31,7 @@ public class JoinServlet extends HttpServlet {
 		int flag = 0;
 		try {
 			flag = service.join(user);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
 		if(flag!=0) {

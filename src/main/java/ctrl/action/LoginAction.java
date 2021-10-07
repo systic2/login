@@ -33,6 +33,6 @@ public class LoginAction implements Command{
             view.setPage("fail.html");
             view.setSend(false);
         }
-        return null;
+        return view;
     }
 }

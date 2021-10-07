@@ -49,7 +49,7 @@
     			%>
 					
 				<li><a readOnly><%= user.getName() %>님 로그인 환영합니다.</a></li>
-				<li><a href="logout.dgccei">[로그아웃]</a></li>  
+				<li><a href="logout.kpc">[로그아웃]</a></li>
 				<%
     				}
     			%>  
@@ -126,7 +126,7 @@
 
 					<div class="modal-body">
 						<form class="form-horizontal" role="form" 
-							action="join.dgccei"
+							action="join.kpc"
 							method="post">
 							<div class="form-group">
 								<label for="Name" class="col-xs-2 col-lg-2 control-label">아이디</label>
@@ -154,7 +154,7 @@
 							<div class="form-group">
 								<div
 									class="col-xs-offset-2 col-xs-10 col-lg-offset-2 col-lg-10 ">
-									<button type="submit">로그인</button>
+									<button type="submit">회원가입</button>
 								</div>
 							</div>
 

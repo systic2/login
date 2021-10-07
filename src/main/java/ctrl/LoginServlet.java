@@ -15,7 +15,7 @@ import model.vo.UserVO;
 import service.UserServiceImpl;
 
 
-@WebServlet("/login.dgccei")
+@WebServlet("/login.kpc")
 public class LoginServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
@@ -32,9 +32,7 @@ public class LoginServlet extends HttpServlet {
 		UserVO result = null;
 		try {
 			result = service.login(user);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
 		if(result != null) {
