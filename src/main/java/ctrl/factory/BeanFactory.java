@@ -1,9 +1,6 @@
 package ctrl.factory;
 
-import ctrl.action.Command;
-import ctrl.action.JoinAction;
-import ctrl.action.LoginAction;
-import ctrl.action.LogoutAction;
+import ctrl.action.*;
 
 import java.util.HashMap;
 
@@ -20,6 +17,7 @@ public class BeanFactory {
         map.put("/login.kpc", new LoginAction());
         map.put("/logout.kpc", new LogoutAction());
         map.put("/join.kpc", new JoinAction());
+        map.put("/bbs_list.kpc", new ListAction());
     }
     public static BeanFactory getInstance(){
         if(instance == null) {

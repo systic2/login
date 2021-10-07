@@ -1,7 +1,9 @@
+model\vo\BoardVO.class
 ctrl\LogoutServlet.class
 model\dao\UserDaoImpl.class
 ctrl\action\LoginAction.class
 ctrl\action\Command.class
+ctrl\action\ListAction.class
 ctrl\JoinServlet.class
 ctrl\LoginServlet.class
 ctrl\action\LogoutAction.class

@@ -1,9 +1,11 @@
 package service;
 
 import model.dao.UserDaoImpl;
+import model.vo.BoardVO;
 import model.vo.UserVO;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class UserServiceImpl {
     public UserServiceImpl() {
@@ -17,5 +19,11 @@ public class UserServiceImpl {
         System.out.println("service join");
         UserDaoImpl dao = new UserDaoImpl();
         return dao.joinRow(user);
+    }
+
+    public ArrayList<BoardVO> list() throws ClassNotFoundException {
+        System.out.println("service list");
+        UserDaoImpl dao = new UserDaoImpl();
+        return dao.listRow();
     }
 }

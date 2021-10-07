@@ -1,8 +1,10 @@
 package model.dao;
 
+import model.vo.BoardVO;
 import model.vo.UserVO;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class UserDaoImpl {
     public static final String driver = "oracle.jdbc.driver.OracleDriver";
@@ -66,5 +68,36 @@ public class UserDaoImpl {
             }
         }
         return flag;
+    }
+
+    public ArrayList<BoardVO> listRow() {
+        System.out.println("dao listRow()");
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rset = null;
+        String listSQL = "select seq, title, writer, content, regdate, cnt from bbs";
+        ArrayList<BoardVO> list = new ArrayList<>();
+        try {
+            conn = DriverManager.getConnection(url, dbUser, dbPwd);
+            pstmt = conn.prepareStatement(listSQL);
+            rset = pstmt.executeQuery();
+            while (rset.next()){
+                BoardVO board = new BoardVO(rset.getInt(1),
+                        rset.getString(2), rset.getString(3),
+                        rset.getString(4), rset.getString(5),
+                        rset.getInt(6));
+                list.add(board);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                conn.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return list;
     }
 }
