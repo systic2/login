@@ -17,9 +17,9 @@ public class BeanFactory {
     private static BeanFactory instance;
     private HashMap<String, Command> map = new HashMap<String, Command>();
     private BeanFactory() {
-        map.put("/dgccei/login.kpc", new LoginAction());
-        map.put("/dgccei/logout.kpc", new LogoutAction());
-        map.put("/dgccei/join.kpc", new JoinAction());
+        map.put("/login.kpc", new LoginAction());
+        map.put("/logout.kpc", new LogoutAction());
+        map.put("/join.kpc", new JoinAction());
     }
     public static BeanFactory getInstance(){
         if(instance == null) {
