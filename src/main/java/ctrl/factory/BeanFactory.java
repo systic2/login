@@ -17,7 +17,7 @@ public class BeanFactory {
         map.put("/login.kpc", new LoginAction());
         map.put("/logout.kpc", new LogoutAction());
         map.put("/join.kpc", new JoinAction());
-        map.put("/bbs_list.kpc", new ListAction());
+        map.put("/login/bbs_list.kpc", new ListAction());
     }
     public static BeanFactory getInstance(){
         if(instance == null) {

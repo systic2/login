@@ -4,9 +4,11 @@ import ctrl.view.ModelAndView;
 import model.vo.BoardVO;
 import service.UserServiceImpl;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+
 
 public class ListAction implements Command{
     private UserServiceImpl service;

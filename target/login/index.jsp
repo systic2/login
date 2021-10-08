@@ -47,7 +47,7 @@
                 <%
     				}else {
     			%>
-					
+				<li class="active"><a href="bbs_list.kpc">게시판</a> </li>
 				<li><a readOnly><%= user.getName() %>님 로그인 환영합니다.</a></li>
 				<li><a href="logout.kpc">[로그아웃]</a></li>
 				<%
